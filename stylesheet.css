@@ -1,13 +1,62 @@
-body{
-    background-image: url(background1.jpg);
+html { 
+  background: url(background01.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 h1 {
     text-align: center;
     font-weight: bold;
 }
-h3{
+h2{
     text-align: center;
 }
-#logo{
+#homeimg{
+    position:absolute;
+    bottom: 0px;
+    right: 25%;
+    left: 50%;
+    margin-left: -250px;
+}
+#des{
+    font-size: 20px;
+    color: navy;
+    position:absolute;
+    right: 25%;
+    left: 50%;
+    margin-left: -300px;
+}
+.desfont{
+    font-size: 20px;
+    color: navy;
+}
+.logo{
     text-align: center;
+}
+.navi{
+    float: left;
+    width: 200px;
+    background-color: greenyellow;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navi li{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid black;
+}
+.navi li a{
+    display: block;
+    padding: 8px 16px;
+    text-decoration: underline;
+}
+.navi li a.active{
+    background-color: aqua;
+    color: crimson;
+}
+.navi li a:hover:not(.active){
+    background-color: navy;
 }
