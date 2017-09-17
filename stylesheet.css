@@ -12,12 +12,28 @@ h1 {
 h2{
     text-align: center;
 }
+fieldset {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-bottom: 2p;
+    border: 2px solid green;
+}
 #homeimg{
     position:absolute;
     bottom: 0px;
     right: 25%;
     left: 50%;
     margin-left: -250px;
+}
+#contactform{
+    position:absolute;
+    bottom: 0px;
+    right: 35%;
+    left: 35%;
+    border: 2px solid black;
+    padding: 10px;
 }
 #des{
     font-size: 20px;
@@ -27,9 +43,19 @@ h2{
     left: 50%;
     margin-left: -300px;
 }
+#contactdes{
+    font-size: 20px;
+    color: navy;
+    position:absolute;
+    right: 25%;
+    left: 50%;
+    margin-left: -450px;
+    text-align: center;
+}
 .desfont{
     font-size: 20px;
     color: navy;
+    text-align: center;
 }
 .logo{
     text-align: center;
@@ -59,4 +85,15 @@ h2{
 }
 .navi li a:hover:not(.active){
     background-color: navy;
+}
+.radio{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+.radio li:hover{
+    background-color: cyan;
+    width: 50%;
+    border: 1px solid black;
 }

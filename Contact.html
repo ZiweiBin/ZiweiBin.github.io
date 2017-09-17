@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel = "stylesheet" type="text/css" href = "stylesheet.css">
+  <title>Snacks</title>
+  <meta name="description" content="HTML5 Template">
+</head>
+<body>
+<h1>Snacks</h1>
+    <p class = "logo"><img src = "logo.jpg" alt = "store logo" style = "width:auto; height:auto;" border = "5";></p>
+    <h2>Contact US</h2>
+        <br>
+    <ul class = "navi">
+        <li><a href = "index.htm">Home Page</a></li>
+        <li><a href = "Best Sell.html">Best Selling Snacks</a></li>
+        <li><a href = "Home Made.html">Home Made Snacks</a></li>
+        <li><a href = "Contact.html" class="active">Contact US</a></li>
+    </ul>
+        <br>
+    <p id = "contactdes">Fell free to leave your comments if you have any question about the products or our store.<br>We will reply you through e-mail as soon as we can. Thank you for your support!</p>
+    <br>
+    <form id = "contactform" action = "">
+        <filedset>
+            <legend>Customer Info</legend>
+            First Name: <input type = "text"><br>
+            Last Name:<input type = "text"><br>
+            Email Address: <input type = "text" size = "40"><br>
+        </filedset>
+        <fieldset>
+            <legend>Support Type</legend>
+            <ul class = "radio">
+            <li><input type = "radio" name = "supporttype" value = "Question">Question</li>
+            <li><input type = "radio" name = "supporttype" value = "Problem">Problem</li>
+            <li><input type = "radio" name = "supporttype" value = "Order Status Update">Order Status Update</li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Comment</legend>
+            <div style = "text-align: center;">
+            <textarea name = "paragraph_text" cols="60" rows="10"></textarea>
+            </div>
+        </fieldset>
+        <div style = "text-align: center;">
+        <input type="reset" value = "Reset" style="width: 150px; height: 30px; border-radius: 5px;">
+        <input type = "submit" value = "Submit" style="width: 150px; height: 30px; border-radius: 5px;">
+        </div>
+    </form>
+</body>
+</html>
