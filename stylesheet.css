@@ -20,6 +20,10 @@ fieldset {
     padding-bottom: 2p;
     border: 2px solid green;
 }
+p{
+    font-family:cursive;
+}
+
 #homeimg{
     position:absolute;
     bottom: 0px;
@@ -56,6 +60,7 @@ fieldset {
     font-size: 20px;
     color: navy;
     text-align: center;
+    font-family: serif;
 }
 .logo{
     text-align: center;
@@ -73,6 +78,7 @@ fieldset {
     font-size: 20px;
     font-weight: bold;
     border: 2px solid black;
+    font-family:fantasy;
 }
 .navi li a{
     display: block;
