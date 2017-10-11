@@ -9,19 +9,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <div>
 <h1>Snacks</h1>
     <p class = "logo"><img src = "logo.jpg" alt = "store logo" style = "width:auto; height:auto;" border = "5";></p>
     <h2>Contact US</h2>
-        <br>
+    <h2>Welcom to Snacks. The best pleace for foodies.</h2>
+    </div>
+        
     <ul class = "navi">
         <li><a href = "index.htm">Home Page</a></li>
         <li><a href = "Best Sell.html">Best Selling Snacks</a></li>
         <li><a href = "Home Made.html">Home Made Snacks</a></li>
         <li><a href = "Contact.html" class="active">Contact US</a></li>
     </ul>
-        <br>
-    <p id = "contactdes">Fell free to leave your comments if you have any question about the products or our store.<br>We will reply you through e-mail as soon as we can. Thank you for your support!</p>
+    
+    <div class="pagedes">
+    <p >Fell free to leave your comments if you have any question about the products or our store.<br>We will reply you through e-mail as soon as we can. Thank you for your support!</p>
     <br>
+    </div>
+    
+    <div>
     <form id = "contactform" action = "">
         <fieldset>
             <legend>Customer Info</legend>
@@ -40,7 +47,7 @@
         <fieldset>
             <legend>Comment</legend>
             <div style = "text-align: center;">
-            <textarea name = "paragraph_text" cols="30" rows="10"></textarea>
+            <textarea name = "paragraph_text" cols="30" rows="10" style="resize: both"></textarea>
             </div>
         </fieldset>
         <div style = "text-align: center;">
@@ -48,5 +55,6 @@
         <input type = "submit" value = "Submit" style="width: 150px; height: 30px; border-radius: 5px;">
         </div>
     </form>
+    </div>
 </body>
 </html>

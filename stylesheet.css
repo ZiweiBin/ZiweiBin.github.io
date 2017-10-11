@@ -5,13 +5,21 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+}
 h1 {
     text-align: center;
     font-weight: bold;
 }
+
 h2{
     text-align: center;
 }
+
 fieldset {
     margin: 0;
     padding: 0;
@@ -20,40 +28,22 @@ fieldset {
     padding-bottom: 2p;
     border: 2px solid green;
 }
+
 p{
     font-family:cursive;
 }
 
-#homeimg{
-    position:absolute;
-    bottom: 0px;
-    right: 25%;
-    left: 50%;
-    margin-left: -250px;
+div{
+    resize: both;
+    overflow: auto;
 }
-#contactform{
-    position:absolute;
-    bottom: 0px;
-    right: 35%;
-    left: 35%;
-    border: 2px solid black;
-    padding: 10px;
-}
-#des{
+
+
+
+.pagedes{
     font-size: 20px;
     color: navy;
-    position:absolute;
-    right: 25%;
-    left: 50%;
-    margin-left: -300px;
-}
-#contactdes{
-    font-size: 20px;
-    color: navy;
-    position:absolute;
-    right: 25%;
-    left: 50%;
-    margin-left: -450px;
+    overflow: auto;
     text-align: center;
 }
 .desfont{
@@ -102,4 +92,12 @@ p{
     background-color: cyan;
     width: 50%;
     border: 1px solid black;
+}
+
+
+#contactform{
+    margin: auto;
+    width: 50%;
+    border: 2px solid black;
+    padding: 10px;
 }
