@@ -7,6 +7,15 @@
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Snacks</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+<script>
+$(document).ready(function(){
+    var timeNow = new Date();
+    document.getElementById("time").innerHTML = "Today is: " + timeNow;
+});
+</script>
+    
 </head>
 <body>
     <div>
@@ -42,5 +51,7 @@
         </tr>
     </table>
     </div>
+
+     <div style="bottom:0px; position:fixed; text-align:center;width:100%"><p id = "time"></p></div>
 </body>
 </html>

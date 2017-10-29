@@ -7,6 +7,36 @@
   <title>Snacks</title>
 <meta name="viewport" content="width=device-width">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+    var timeNow = new Date();
+    document.getElementById("time").innerHTML = "Today is: " + timeNow;
+        
+function validateForm() {
+    var fname = document.myContact.fname.value;
+    var lname = document.myContact.lname.value;
+    var email = document.myContact.email.value;
+    var supporttype = document.getElementsByName("supporttype");
+    if(fname == null || fname == ""){
+        alert("FirstName can't be blank");
+        return false;
+    }else if(lname == null || lname == ""){
+        alert("LastName can't be blank");
+        return false;
+    }else if(email == null || email == ""){
+        alert("E-mail can't be blank");
+        return false;
+    }else if(fname == null || fname == ""){
+        alert("FirstName can't be blank");
+        return false;
+    }else if(supporttype.checked == false){
+        alert("Support Type has to be checked");
+        return false;
+    }
+}
+});
+    </script>
 </head>
 <body>
     <div>
@@ -29,12 +59,12 @@
     </div>
     
     <div>
-    <form id = "contactform" action = "">
+    <form id = "contactform" name = "myContact" action = "" onsubmit="return validateForm()" method="get">
         <fieldset>
             <legend>Customer Info</legend>
-            First Name: <input type = "text" size = '25%'><br>
-            Last Name:<input type = "text" size = '25%'><br>
-            Email Address: <input type = "text" size = '25%'><br>
+            First Name: <input name = "fname" type = "text" size = '25%'><br>
+            Last Name:<input name = "lname" type = "text" size = '25%'><br>
+            Email Address: <input name = "email" type = "text" size = '25%'><br>
         </fieldset>
         <fieldset>
             <legend>Support Type</legend>
@@ -56,5 +86,8 @@
         </div>
     </form>
     </div>
+    <br>
+    <br>
+    <div style="bottom:0px; position:fixed; text-align:center;width:100%"><p id = "time"></p></div>
 </body>
 </html>
