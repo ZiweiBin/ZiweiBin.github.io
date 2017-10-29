@@ -12,6 +12,7 @@
 $(document).ready(function(){
     var timeNow = new Date();
     document.getElementById("time").innerHTML = "Today is: " + timeNow;
+});
         
 function validateForm() {
     var fname = document.myContact.fname.value;
@@ -30,12 +31,11 @@ function validateForm() {
     }else if(fname == null || fname == ""){
         alert("FirstName can't be blank");
         return false;
-    }else if(supporttype.checked == false){
+    }else if(supporttype[0].checked == false && supporttype[1].checked == false &&supporttype[2].checked == false){
         alert("Support Type has to be checked");
         return false;
     }
 }
-});
     </script>
 </head>
 <body>
