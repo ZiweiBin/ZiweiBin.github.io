@@ -13,6 +13,16 @@
 $(document).ready(function(){
     var timeNow = new Date();
     document.getElementById("time").innerHTML = "Today is: " + timeNow;
+        $("#menu").click(function(){
+        $("#a").fadeToggle();
+        $("#b").fadeToggle("slow");
+        $("#a").hover(function(){
+            $("#b").fadeToggle();
+        });
+        $("#b").hover(function(){
+            $("#a").fadeToggle();
+        })
+    })
 });
 </script>
     
@@ -27,8 +37,9 @@ $(document).ready(function(){
     
     <ul class = "navi">
         <li><a href = "index.htm">Home Page</a></li>
-        <li><a href = "Best Sell.html">Best Selling Snacks</a></li>
-        <li><a href = "Home Made.html" class="active">Home Made Snacks</a></li>
+        <li><a id = "menu">Menu</a></li>
+        <li id = "a" style="display: none"><a href = "Best Sell.html">Best Selling Snacks</a></li>
+        <li id = "b" style="display: none"><a href = "Home Made.html" class="active">Home Made Snacks</a></li>
         <li><a href = "Contact.html">Contact US</a></li>
     </ul>
     
