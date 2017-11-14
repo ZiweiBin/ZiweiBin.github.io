@@ -16,15 +16,8 @@ $(document).ready(function(){
     $("#menu").click(function(){
         $("#a").fadeToggle();
         $("#b").fadeToggle("slow");
-        $("#a").hover(function(){
-            $("#b").fadeToggle();
-        });
-        $("#b").hover(function(){
-            $("#a").fadeToggle();
-        })
-    })
+    });
 });
-
 </script>
 
 </head>
@@ -46,9 +39,62 @@ $(document).ready(function(){
     
         <br>
         <div class="pagedes">
-        <p>We sell the best snacks here, along with my home made snacks.</p></div>
+        <p>We sell the best snacks here, along with my home made snacks.</p></div><br>
     
-    <div style="bottom:50px; position:fixed; text-align:center;width:100%"><img src = "snacks1.jpg"></div>
+    <div class = "slideshow-container">
+        <div class = "slides fade">
+            <a href = "Home Made.html"><img src = "home01.jpg"></a>
+            <div class = "text">Home Made</div>
+        </div>
+        <div class = "slides fade">
+            <a href = "Home Made.html"><img src = "home02.jpg"></a>
+            <div class = "text">Home Made</div>
+        </div>
+        <div class = "slides fade">
+            <a href = "Best Sell.html"><img src = "sell01.jpg"></a>
+            <div class = "text">Best Sell</div>
+        </div>
+        <div class = "slides fade">
+            <a href = "Best Sell.html"><img src = "sell02.jpg"></a>
+            <div class = "text">Best Sell</div>
+        </div>
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    
+    <br>
+    <br>
+    <div style="bottom:0px; text-align:center;width:100%"><img src = "snacks1.jpg"></div>
     <div style="bottom:0px; position:fixed; text-align:center;width:100%"><p id = "time"></p></div>
+    
+    <script>
+    var slidenum = 0;
+    showSlides();
+    
+
+    function showSlides(){
+        
+        var slides = document.getElementsByClassName("slides");
+        var dots = document.getElementsByClassName("dot");
+        var i;
+        for (i = 0; i < slides.length; i++){
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++){
+            dots[i].className = dots[i].className.replace(" activedot", "");
+        }
+        slidenum++;
+        if(slidenum > slides.length){
+                slidenum = 1;
+        }
+        slides[slidenum-1].style.display = "block";
+        dots[slidenum-1].className += " activedot";
+        setTimeout(showSlides, 3000);
+    }
+    </script>
 </body>
 </html>
