@@ -1,0 +1,58 @@
+img {
+    max-width: 100%;
+    max-height: 600px;
+    height: auto;
+}
+#pac1{
+    position: relative;
+    width: 300px;
+    left: 0px;
+}
+#pac2{
+    position: relative;
+    width: 300px;
+    left: 0px;
+}
+#bean1{
+    position: absolute;
+    left: 300px;
+    top: 100px;
+}
+#bean2{
+    position: absolute;
+    left: 400px;
+    top: 100px;
+}
+#bean3{
+    position: absolute;
+    left: 500px;
+    top: 100px;
+}
+#bean4{
+    position: absolute;
+    left: 600px;
+    top: 100px;
+}
+#bean5{
+    position: absolute;
+    left: 300px;
+    top: 450px;
+}
+#bean6{
+    position: absolute;
+    left: 400px;
+    top: 450px;
+}
+#bean7{
+    position: absolute;
+    left: 500px;
+    top: 450px;
+}
+#bean8{
+    position: absolute;
+    left: 600px;
+    top: 450px;
+}
+#signal{
+    height: 200px;
+}
