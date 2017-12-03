@@ -33,6 +33,12 @@ img {
     left: 600px;
     top: 100px;
 }
+#kidwin{
+    position: absolute;
+    left: 800px;
+    top: 100px;
+    display: none;
+}
 #bean5{
     position: absolute;
     left: 300px;
@@ -52,6 +58,12 @@ img {
     position: absolute;
     left: 600px;
     top: 450px;
+}
+#dudewin{
+    position: absolute;
+    left: 800px;
+    top: 450px;
+    display: none;
 }
 #signal{
     height: 200px;

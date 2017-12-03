@@ -11,18 +11,19 @@
 
 </head>
 <body>
-    <div><img src="pac1.jpg" id="pac1"><img src="bean.jpg" id="bean1"><img src="bean.jpg" id="bean2"><img src="bean.jpg" id="bean3"><img src="bean.jpg" id="bean4"></div>
+    <div><img src="pac1.jpg" id="pac1"><img src="bean.jpg" id="bean1"><img src="bean.jpg" id="bean2"><img src="bean.jpg" id="bean3"><img src="bean.jpg" id="bean4"><img src="winner.jpg" id="kidwin" onclick="reset()"></div>
     <div><p>pac-man kid</p></div>
     <br>
-    <div><img src="pac2.png" id="pac2"><img src="bean.jpg" id="bean5"><img src="bean.jpg" id="bean6"><img src="bean.jpg" id="bean7"><img src="bean.jpg" id="bean8"></div>
+    <div><img src="pac2.png" id="pac2"><img src="bean.jpg" id="bean5"><img src="bean.jpg" id="bean6"><img src="bean.jpg" id="bean7"><img src="bean.jpg" id="bean8"><img src="winner.jpg" id="dudewin" onclick="reset()"></div>
     <div>pac-man dude</div>
-    <div style="text-align: center;"><img src="signal.jpg" id="signal" onclick="race()"></div><br>
+    <div style="text-align: center;"><img id = image src="red.jpg" id="signal" onclick="race()"></div><br>
     <div id = "massage" style="text-align: center;"><p>Click the signal light to start!</p></div>
 </body>
 <script>
-    function race(){
-        var i = 0;
-        var n = 0;
+    function reset(){
+        document.getElementById("pac1").style.left = '0px';
+        document.getElementById("pac2").style.left = '0px';
+        document.getElementById("image").src = "red.jpg";
         document.getElementById("bean1").style.display = "block";
         document.getElementById("bean2").style.display = "block";
         document.getElementById("bean3").style.display = "block";
@@ -31,8 +32,17 @@
         document.getElementById("bean6").style.display = "block";
         document.getElementById("bean7").style.display = "block";
         document.getElementById("bean8").style.display = "block";
+        document.getElementById("kidwin").style.display = "none";
+        document.getElementById("dudewin").style.display = "none";
+        document.getElementById("massage").innerHTML = "Click the signal light to start!";
+    }
+    function race(){
+        var i = 0;
+        var n = 0;
         
         document.getElementById("massage").innerHTML = "Race started!";
+        document.getElementById("image").src = "green.jpg";
+        
         var inter1 = setInterval(function(){
             i += Math.round(Math.random()*50);
             document.getElementById("pac1").style.left = i + 'px';
@@ -49,7 +59,8 @@
                 document.getElementById("bean4").style.display = "none";
                 clearInterval(inter1);
                 clearInterval(inter2);
-                document.getElementById("massage").innerHTML = "pac-man kid win! Click the signal to start again!";
+                document.getElementById("massage").innerHTML = "pac-man kid win! Click the winner image to reset!";
+                document.getElementById("kidwin").style.display = "block";
             };
         }, 1000);
         var inter2 = setInterval(function(){
@@ -68,7 +79,8 @@
                 document.getElementById("bean8").style.display = "none";
                 clearInterval(inter1);
                 clearInterval(inter2);
-                document.getElementById("massage").innerHTML = "pac-man dude win! Click the signal to start again!";
+                document.getElementById("massage").innerHTML = "pac-man dude win! Click the winner image to reset!";
+                document.getElementById("dudewin").style.display = "block";
             };
         }, 1000);
     }
